@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #define SIZE 256
 
-int main()
-{
+int main(char* argv[])
+{	
     int s[SIZE];
     int j;
     int total = 0;
@@ -31,7 +31,6 @@ int main()
     }
 
     printf("%8s%13d\n", "Total", total);
-
     return EXIT_SUCCESS;
 }
 

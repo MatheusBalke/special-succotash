@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main(int argc, char* argv[]) {
 
     FILE *arquivo;
     int c;
@@ -8,8 +8,9 @@ int main() {
     int cl = 0;
     int cb = 0;
     int cp = 0;
+	int flag = 0;
 
-    arquivo = fopen("fatorial.c", "r");
+    arquivo = fopen(argv[1] , "r");
 
     c = getc(arquivo);
     while( c != -1 )
@@ -17,7 +18,7 @@ int main() {
         cb++;
         if (c == '\n')
             cl = cl + 1;
-        if (c == ' ')
+        if ((c == ' ') || (c=='\n') || (c == '\t'))
             cp = cp + 1;
 
         printf("%i %c %x\n", c, c, c);
