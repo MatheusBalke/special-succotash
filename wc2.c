@@ -4,7 +4,7 @@ int main(int argc, char* argv[]) {
 
     FILE *arquivo;
     int c;
-
+	int cont = 0;
     int cl = 0;
     int cb = 0;
     int cp = 0;
@@ -21,7 +21,7 @@ int main(int argc, char* argv[]) {
         if ((c == ' ') || (c=='\n') || (c == '\t'))
             cp = cp + 1;
 
-        printf("%i %c %x\n", c, c, c);
+      
         c = getc(arquivo);
     }
 
